@@ -30,8 +30,8 @@
             </div>
             <div class="right-header">
                 <h1 class="name">
-                    Hi, I'm <span>Shan Ravins.</span><br>
-                    A Web Developer.
+                    Hi, I'm <span id="element"></span><br>
+                    
                 </h1>
 
                 <p>
@@ -609,6 +609,16 @@
 </div>
 
     <script src="app.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+
+<script>
+    var typed = new Typed('#element', {
+    strings: ["Shan Ravins.", "A Web Developer."],
+    typeSpeed: 100,
+    backspeed: 60,
+    loop:true
+  });
+</script>
 
 </body>
 
