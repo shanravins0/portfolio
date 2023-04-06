@@ -219,6 +219,7 @@ section {
 }
 .header-content .right-header .name {
   font-size: 3rem;
+  font-family: "Alkatra", cursive;
 }
 .header-content .right-header .name span {
   color: var(--color-secondary);
