@@ -135,6 +135,7 @@
         .right-contatct{
             margin-left: 0;
             margin-top: 2.5rem;
+            
         }
     }
     
@@ -248,6 +249,41 @@
     .main-title{
         h2{
             font-size: 3rem;
+        }
+    }
+    .blogs{
+        grid-template-columns: 1fr;
+    }
+    .submit-btn{
+        padding-bottom: 4rem;
+    }
+}
+
+@media screen and (max-width: 600px){
+
+    .section {
+        padding: 15rem 3rem;
+    }
+
+    .portfolios{
+        grid-template-columns: 1fr;
+    }
+
+    
+}
+
+@media screen and (max-width: 400px){
+    .controlls {
+        top: auto;
+        bottom: 0;
+        flex-direction: row;
+        justify-content: center;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        background-color: var(--color-grey-5);
+        .control {
+            margin: .68rem .5rem !important;
         }
     }
 }
