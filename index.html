@@ -560,16 +560,16 @@
                         </div>
                     </div>
                     <div class="right-contact">
-                        <form class="contact-form" method="post" action="https://sheetdb.io/api/v1/zh67wlmupd1d8" name="contact-form" id="sheetdb-form">
+                        <form class="contact-form" method="post" action="" name="contact-form" >
                             <div class="input-control i-c-2">
-                                <input type="text" name="data[Name]" required placeholder="YOUR NAME">
-                                <input type="email" name="data[Email]" required placeholder="YOUR EMAIL">
+                                <input type="text" name="Name" id="name" required placeholder="YOUR NAME">
+                                <input type="email" name="Email" id="email" required placeholder="YOUR EMAIL">
                             </div>
                             <div class="input-control">
-                                <input type="text" name="data[Subject]" required placeholder="ENTER SUBJECT">
+                                <input type="text" name="Subject" id="subject" required placeholder="ENTER SUBJECT">
                             </div>
                             <div class="input-control">
-                                <textarea name="" id="" cols="15" rows="8" name="data[Message]" placeholder="Message here..."></textarea>
+                                <textarea name="" id="" cols="15" rows="8" itemid="message" name="Message" placeholder="Message here..."></textarea>
                             </div>
                             <div class="submit-btn" name="submit" type="submit">
                                 <a href="" class="main-btn">
@@ -603,6 +603,10 @@
             <i class="far fa-envelope-open"></i>
         </div>
     </div>
+
+<div class="theme-btn">
+    <i class="fas fa-adjust"></i>
+</div>
 
     <script src="app.js"></script>
 

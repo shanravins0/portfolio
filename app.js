@@ -34,60 +34,44 @@ function PageTransition() {
         }
     })
 
+// Toggle theme
+
+const themeBtn = document.querySelector('.theme-btn')
+themeBtn.addEventListener('click',() =>{
+    let element = document.body;
+    element.classList.toggle('light-mode')
+})
+
 }
 
 PageTransition();
 
 //Contact form
 
-// function postToGoogle() {
-//     var field1 = $("#Name").val();
-//     var field2 = $("#Email").val();
-//     var field3 = $("#Subject").val();
-//     var field4 = $("#Message").val();
+// const form = document.getElementById('contact-form');
 
-//     $.ajax({
-//       url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSds997ZwEQq97dSpZd40T5TV2udQcu76IjqsOqoYU6zEDRcug/formResponse",
-//       data: {
-//         "entry.799228094": field1,
-//         "entry.579005095": field2,
-//         "entry.714709535": field3,
-//         "entry.94457689": field4
-//       },
-//       type: "POST",
-//       dataType: "xml",
-//       success: function (d) {
-//         $('#contact-form').trigger('reset');
-//       },
-//       error: function (x, y, z) {
-//         $('#contact-form').trigger('reset');
-//       }
-//     });
-//     return false;
-//   }
+// form.addEventListener('submit', (event) => {
+//   event.preventDefault();
 
-  
-    // const scriptURL = 'https://script.google.com/macros/s/AKfycbyUP1mJaQqXw6ryQKMMrwSAgLb7PLMsx69Xqliu83OJEZmiuwDh7S10CNLyEJ5ePXbt/exec'
-    // const form = document.forms['contact-form']
+//   const name = document.getElementById('name').value;
+//   const email = document.getElementById('email').value;
+//   const subject = document.getElementById('subject').value;
+//   const message = document.getElementById('message').value;
 
-    // form.addEventListener('submit', e => {
-    //   e.preventDefault()
-    //   fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-    //     .then(response => console.log('Success!', response))
-    //     .catch(error => console.error('Error!', error.message))
-    // })
-  
-    var form = document.getElementById('sheetdb-form');
-        form.addEventListener("submit", e => {
-          e.preventDefault();
-          fetch(form.action, {
-              method : "POST",
-              body: new FormData(document.getElementById("sheetdb-form")),
-          }).then(
-              response => response.json()
-          ).then((html) => {
-            // you can put any JS code here
-            window.open('page2.html', '_blank');
+//   const formData = new FormData();
+//   formData.append('entry.799228094', name); // replace 1234567890 with the actual field ID for Name in the Google Form
+//   formData.append('entry.579005095', email); // replace 0987654321 with the actual field ID for Email in the Google Form
+//   formData.append('entry.714709535', subject); // replace 2468013579 with the actual field ID for Subject in the Google Form
+//   formData.append('entry.94457689', message); // replace 1357902468 with the actual field ID for Message in the Google Form
 
-          });
-        });
+//   fetch('https://docs.google.com/forms/u/0/d/e/1FAIpQLSds997ZwEQq97dSpZd40T5TV2udQcu76IjqsOqoYU6zEDRcug/formResponse?usp=pp_url&entry.799228094=' + name + '&entry.579005095=' + email + '&entry.714709535=' + subject + '&entry.94457689=' + message, {
+//     method: 'POST',
+//     body: formData
+//   })
+//   .then(response => {
+//     // handle response from Google Forms API
+//   })
+//   .catch(error => {
+//     // handle error
+//   });
+// });

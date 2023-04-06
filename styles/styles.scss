@@ -1,3 +1,5 @@
+
+
 * {
     margin: 0;
     padding: 0;
@@ -21,6 +23,21 @@
     --box-shadow-1: 0 3px 15px rgba(0, 0, 0, 0.3);
 }
 
+.light-mode {
+    --colors-primary: #FFFFFF;
+    --color-secondary: #F56692;
+    --color-white: #454e56;
+    --color-black: #000;
+    --color-grey0: #f8f8f8;
+    --color-grey-1: #6c7983;
+    --color-grey-2: #6c7983;
+    --color-grey-3: #6c7983;
+    --color-grey-4: #454e56;
+    --color-grey-5: #f8f8f8;
+    --color-grey-6: #12181b;
+}
+
+
 body {
     background-color: var(--colors-primary);
     font-family: "Poppins", sans-serif;
@@ -37,10 +54,14 @@ a {
 }
 
 header {
-    height: 100vh;
+    min-height: 100vh;
     color: var(--color-white);
     overflow: hidden;
     padding: 0 !important;
+    // @media screen and (max-width:610px) {
+    //     min-height: 100vh;
+    // }
+   
 }
 
 section {
@@ -130,11 +151,54 @@ section {
     }
 }
 
+// .theme-btn{
+//     padding: 1rem;
+//     cursor: pointer;
+//     background-color: var(--color-grey-4);
+//     width: 55px;
+//     height: 55px;
+//     border-radius: 50%;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     margin: .7rem 0;
+//     box-shadow: 0 3px 15px rgba(0,0,0,.2);
+//     i{
+//         font-size: 1.2rem;
+        
+//     }
+// }
+.theme-btn{
+    top: 5%;
+    right: 3%;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--color-grey-4);
+    cursor: pointer;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 3px 15px rgba(0,0,0,.2);
+    transition: all .1s ease-in-out;
+    &:active{
+        transform: translateY(-3px);
+    }
+    i{
+        font-size: 1.4rem;
+        color: var(--color-grey-2);
+        pointer-events: none;
+    }
+
+}
+
+
 // Header-content
 .header-content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    height: 100vh;
+    min-height: 100vh;
     .left-header {
         display: flex;
         align-items: center;
@@ -689,3 +753,6 @@ img{
         }
     }
 }
+
+
+@import './media';
